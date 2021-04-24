@@ -1,0 +1,15 @@
+{
+  "name": "shaadi",
+  "version": "1.0.0",
+  "description": "The Marrige Agency ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "shaadi"
+  },
+  "author": "arifrumel",
+  "license": "ISC"
+}
