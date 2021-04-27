@@ -4,6 +4,8 @@ const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 // const crypto = require('crypto')
 
+require('dotenv/config');
+
 const userSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -56,7 +58,7 @@ userSchema.pre('save', async function (next){
 
 // Return JWT token 
 userSchema.methods.getJwtToken = function () {
-    return jwt.sign({id: this._id}, 'skdfjlsdjf', {expiresIn: 7 * 24 * 60 * 60})
+    return jwt.sign({id: this._id}, process.env.JWT_SECRET, {expiresIn: process.env.JWT_EXPIRES_TIME})
 }
 
 //Compare user password

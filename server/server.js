@@ -3,9 +3,9 @@ const app = express();
 const mongoose = require('mongoose'); 
 require('dotenv').config()
 
-const url = 'mongodb://127.0.0.1:27017/shaadi'
+// const url = 'mongodb://127.0.0.1:27017/shaadi'
 
-mongoose.connect(url, {
+mongoose.connect(process.env.MONGO_DB_LOCAL, {
     useNewUrlParser: true, 
     useUnifiedTopology: true,
     useCreateIndex: true
