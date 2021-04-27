@@ -26,7 +26,7 @@ exports.registerUser =  async (req, res) =>{
         // }
     })
 
-    console.log(user)
+    //console.log(user)
 
     const token = user.getJwtToken()
 
